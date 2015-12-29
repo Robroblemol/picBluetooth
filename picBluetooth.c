@@ -16,27 +16,27 @@ void main()
    delay_ms(500);
 
    while (true) {
-       if(kbhit()){
-          cad = getc();
-          delay_ms(50);
-          putc(cad);
+       if(kbhit()){// si recivimos datos
+          cad = getc();// se guardan en cad
+          delay_ms(50);//espremos 50ms
+          putc(cad);//devolvemos lo recivido
        }
-       if(cad == 'a'){
-       output_high(led);
+       if(cad == 'a'|| cad == 'A'){// si cad igual 'a'
+       output_high(led);// led encendido
       }
-       if(cad == 'b'){
-         output_low(led);
+       if(cad == 'b'|| cad == 'B'){//si cad igual 'b'
+         output_low(led);//led apagado
        }
-       if (cad == 'c') {
-         output_toggle(led);
+       if (cad == 'c'|| cad == 'C') {//si cad igual 'c'
+         output_toggle(led);//led toggle
          cad = 's';
        }
-       if(input(boton)==0){
-         delay_ms(500);
-          printf("Probando envio de datos\r\n");
+       if(input(boton)==0){// si boton presionado (activo bajo)
+         delay_ms(500);// evitamos el rebote
+          printf("Probando envio de datos\r\n");//envio mensaje
        }
-       if(cad == ' '){
-         output_toggle (led);
+       if(cad == ' '){//si cad en estado inicial
+         output_toggle (led);//cada segundo enciendo y apago el led
          delay_ms(1000);
        }
    }

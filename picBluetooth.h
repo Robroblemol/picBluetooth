@@ -32,5 +32,5 @@
 #build (reset=0x1000,interrupt=0x1008)//reserva para la bootloader
 #org 0x0000,0x0FFF{}
 
-#define led pin_E0
-#define boton pin_C2
+#define led pin_E0//definimos pin_e0 como led
+#define boton pin_C2//definimos pin_C2 como boton
