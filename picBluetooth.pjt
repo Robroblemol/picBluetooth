@@ -1,0 +1,20 @@
+[PROJECT]
+Target=picBluetooth.hex
+Development_Mode=
+Processor_Text=PIC18F4550
+ToolSuite=CCS
+[picBluetooth]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=picBluetooth
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Units]
+Link=0
+Count=1
+1=picBluetooth.c
